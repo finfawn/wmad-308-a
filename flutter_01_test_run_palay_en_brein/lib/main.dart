@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         title: 'Palay-en',
         theme: ThemeData(
           useMaterial3: true,
-          colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 0, 0, 0)),
+          colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 0, 26, 255)),
         ),
         home: MyHomePage(),
       ),
@@ -223,7 +223,7 @@ class FavoritesPage extends StatelessWidget {
     return ListView(
       children: [
         Padding(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.all(40),
           child: Text('You have ${appState.favorites.length} favorites:'),
         ),
         for (var pair in appState.favorites)
@@ -256,7 +256,7 @@ class DislikesPage extends StatelessWidget {
     return ListView(
       children: [
         Padding(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.all(40),
           child: Text('You have ${appState.dislikes.length} dislikes:'),
         ),
         for (var pair in appState.dislikes)
